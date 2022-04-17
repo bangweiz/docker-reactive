@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 services:
   - docker
 
@@ -6,4 +7,5 @@ before_install:
   - docker build -t bangweiz/docker-reactive .
 
 script:
-  - docker run bangweiz/docker-reactive npm run test -- --coverage
+  - docker run -e CI=true bangweiz/docker-reactive npm run test 
+
