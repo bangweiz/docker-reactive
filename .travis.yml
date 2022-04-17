@@ -6,4 +6,4 @@ before_install:
   - docker build -t bangweiz/docker-reactive .
 
 script:
-  - docker run bangwei/docker-reative npm run test -- --coverage
+  - docker run bangweiz/docker-reactive npm run test -- --coverage
